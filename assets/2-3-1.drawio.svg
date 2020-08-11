@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="541px" height="312px" viewBox="-0.5 -0.5 541 312" content="&lt;mxfile host=&quot;2b1e72b7-b982-494c-8490-da285ae19801&quot; modified=&quot;2020-08-11T02:12:52.429Z&quot; agent=&quot;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Code/1.47.3 Chrome/78.0.3904.130 Electron/7.3.2 Safari/537.36&quot; etag=&quot;_HqIrrbssURBj6tC58eG&quot; version=&quot;13.1.3&quot;&gt;&lt;diagram id=&quot;6hGFLwfOUW9BJ-s0fimq&quot; name=&quot;Page-1&quot;&gt;7VjbcpswEP0avXoAcRGPxsbpQzrTmTw0eVSMYkgx8gg5tvv1FWbF3Q6JkybNFGYyu0cXpD27R4oRnq33V4Ju4u88YimyjGiP8BxZlmtY6m8BHEoAe24JrEQSlZBZAzfJbwagAeg2iVje6ig5T2WyaYNLnmVsKVsYFYLv2t0eeNr+6oauWA+4WdK0j/5MIhmXKLG8Gv/GklWsv2y6ftmyproz7CSPacR3DQiHCM8E57K01vsZS4vY6biU4xYnWquFCZbJMQNgXU803cLeYF3yoDfLIrV3cLmQMV/xjKZhjQaCb7OIFTMayqv7XHO+UaCpwEcm5QGIpFvJFRTLdQqtarHicAvjj85d4Uwc7c73zcb5AbxcCv6LzXjKxXGtmBjFq1r6cYDQ5HwrlrAzoEtSsWLQi5RQsefGMIjdFeNrpr6vOgiWUpk8tfOBQlqtqn515JUBwR8mwusTEWJEMPJdMKY+GAEGg5hHw0Bktqa5ZEK78x6JNUVFvHdxItnNhh4DsVMl2qbjIUnTRlAfnOIdCrd7fIoRPJMNvHzO0fDEhGT7syHWrQaUCmiFA+6uLjxTY3Gj6IhxOSnkMlLMr8hHRQDwYfp/kRB9AJzVqyyaFhqvvIxnrKM0+0TeNuyGziivlpnC0SrzedTJNEfKU4OLISo0NlrF4As/eKIWXKeC20kFo0NxuR0Y1TyFOhNhrz1RN1XKGPTmOWZLtetxCaTz/b/OduraHqGz9nuVtfXJriF1bd81204U+mtE5UJxIBeIw4VVb3aKtRL7l1Z9dQmGiSz8fmWPewlmTq4SeU3vj7VsommY5LlqAy9AoYOCEPkYEGIjy01VqIN7oaxVYY1WDgv5SmZsFMyRP0OhiwhB+tgcFA/jxeKxUI+HhxIrcu9dZ0A8zGnxvo14dO4E1Tn9nHh4byEedo9ba/Lae1pJdkBOkG3V4/2FnqiakTTIJkXqqKQJveLbZ0+Kf41sy3HabA/dAN+NbafHNu5WsmZIG8FMk0d0OkwBmS60ockL/CE6PeTbus+biMHpFX6dRLE/VBbcEXeK3r8KEc3j6vrWiOtzx3Xn0B0I3Edd0l13gn31YOK7NrExaR/e3VCPPbwdYpyf6NWHt3Lr37/K7vWPiDj8Aw==&lt;/diagram&gt;&lt;/mxfile&gt;">
+    <defs/>
+    <g>
+        <path d="M 124.94 80 L 124.94 180 L 193.63 180" fill="none" stroke="#808080" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 198.88 180 L 191.88 183.5 L 193.63 180 L 191.88 176.5 Z" fill="#808080" stroke="#808080" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="50" y="0" width="150" height="80" rx="12" ry="12" fill="#f5f5f5" stroke="#666666" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 40px; margin-left: 51px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                ブランチ「master」
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="125" y="44" fill="#333333" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ブランチ「master」
+                </text>
+            </switch>
+        </g>
+        <rect x="200" y="140" width="150" height="80" rx="12" ry="12" fill="#f5f5f5" stroke="#666666" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 148px; height: 1px; padding-top: 180px; margin-left: 201px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                ブランチ「1」
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="275" y="184" fill="#333333" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ブランチ「1」
+                </text>
+            </switch>
+        </g>
+        <path d="M 200 40 L 350 40" fill="none" stroke="#808080" stroke-miterlimit="10" pointer-events="stroke"/>
+        <rect x="350" y="0" width="140" height="80" rx="12" ry="12" fill="#f5f5f5" stroke="#666666" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 40px; margin-left: 351px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #333333; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                ブランチ「master」
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="420" y="44" fill="#333333" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    ブランチ「master」
+                </text>
+            </switch>
+        </g>
+        <path d="M 350 180 L 420 180 L 420 86.37" fill="none" stroke="#808080" stroke-miterlimit="10" pointer-events="stroke"/>
+        <path d="M 420 81.12 L 423.5 88.12 L 420 86.37 L 416.5 88.12 Z" fill="#808080" stroke="#808080" stroke-miterlimit="10" pointer-events="all"/>
+        <rect x="0" y="160" width="140" height="70" fill="#ffff73" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 195px; margin-left: 1px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                1.GitLabのissueに従い
+                                <br/>
+                                ブランチを作成
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="70" y="199" fill="#1A1A1A" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    1.GitLabのissueに従い...
+                </text>
+            </switch>
+        </g>
+        <rect x="205" y="240" width="140" height="70" fill="#ffff73" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 275px; margin-left: 206px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                2.ブランチ「1」へ
+                                <br/>
+                                コミットを蓄積
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="275" y="279" fill="#1A1A1A" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    2.ブランチ「1」へ...
+                </text>
+            </switch>
+        </g>
+        <rect x="400" y="160" width="140" height="70" fill="#ffff73" stroke="#d6b656" pointer-events="all"/>
+        <g transform="translate(-0.5 -0.5)">
+            <switch>
+                <foreignObject style="overflow: visible; text-align: left;" pointer-events="none" width="100%" height="100%" requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility">
+                    <div xmlns="http://www.w3.org/1999/xhtml" style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 138px; height: 1px; padding-top: 195px; margin-left: 401px;">
+                        <div style="box-sizing: border-box; font-size: 0; text-align: center; ">
+                            <div style="display: inline-block; font-size: 12px; font-family: Helvetica; color: #1A1A1A; line-height: 1.2; pointer-events: all; white-space: normal; word-wrap: normal; ">
+                                3.GitLabのマージリクエストを用い
+                                <br/>
+                                ブランチをマージ
+                            </div>
+                        </div>
+                    </div>
+                </foreignObject>
+                <text x="470" y="199" fill="#1A1A1A" font-family="Helvetica" font-size="12px" text-anchor="middle">
+                    3.GitLabのマージリクエストを用い...
+                </text>
+            </switch>
+        </g>
+        <path d="M 16.4 120 L 530 120" fill="none" stroke="#808080" stroke-miterlimit="10" stroke-dasharray="3 3" pointer-events="stroke"/>
+    </g>
+    <switch>
+        <g requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"/>
+        <a transform="translate(0,-5)" xlink:href="https://desk.draw.io/support/solutions/articles/16000042487" target="_blank">
+            <text text-anchor="middle" font-size="10px" x="50%" y="100%">
+                Viewer does not support full SVG 1.1
+            </text>
+        </a>
+    </switch>
+</svg>

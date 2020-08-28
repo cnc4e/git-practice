@@ -224,25 +224,25 @@ Fast-forward
 
 ### プラクティス
 
-GitLabのissueを確認します。issueに紐づく新しいブランチを`git checkout -b`で作成し、issueに従って変更を行います。その後、作成したブランチをリモートリポジトリへプッシュし、マージリクエスト機能を使ってみます。  
+GitLabのissueに紐づく新しいブランチを`git checkout -b`で作成し、issueに従って変更を行います。その後、作成したブランチをリモートリポジトリへプッシュし、マージリクエスト機能を使ってみます。  
 なお、`git branch`を実行するとブランチ一覧と現在のブランチを確認できます。  
 GitLabからログインを求められた場合は、以下のユーザ/パスワードを使用してください。  
 git-practice/git-practice  
 
-1. ブラウザで[GitLab git-practice-target issue#1](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/issues/1)にアクセスし、内容を確認してください。
-2. コマンドプロンプトまたはPowerShellを使い、任意のディレクトリで`http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。（[2-2](#2-2-リモートにプッシュ)で実行している場合は不要です）
-3. cdコマンドを実行し、ディレクトリ「git-practice-target」へ移動してください。（[2-2](#2-2-リモートにプッシュ)で実行している場合は不要です）
-4. ローカルリポジトリのブランチ一覧を確認し、以下のような出力になることを確認してください。
+1. コマンドプロンプトまたはPowerShellを使い、任意のディレクトリで`http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。（[2-2](#2-2-リモートにプッシュ)で実行している場合は不要です）
+2. cdコマンドを実行し、ディレクトリ「git-practice-target」へ移動してください。（[2-2](#2-2-リモートにプッシュ)で実行している場合は不要です）
+3. ローカルリポジトリのブランチ一覧を確認し、以下のような出力になることを確認してください。
 ```
 * master
 ```
-5. 新しいブランチ「1」を作成してください。
+4. ブラウザで[GitLab git-practice-target issue#1](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/issues/1)にアクセスし、これから対応するissueのページを開きます。
+5. issueに対応するため、新しいブランチ「1」を作成してください。
 6. ローカルリポジトリのブランチ一覧を確認し、以下のような出力になることを確認してください。
 ```
 * 1
   master
 ```
-7. issueの対応内容に従い、ファイル「<社員番号>.txt」を作成してください。（手段は問いません。自身の社員番号をファイル名にしてください）
+7. 先ほどブラウザで開いたissueの説明に従って、修正を行ってください。
 8. すべてのファイルをステージングし、コメント「add file」をつけてコミットしてください。
 9. リモートリポジトリを更新してください。リポジトリは`origin`、ローカルブランチは`1`、リモートブランチは`1`です。（コマンドの書き方は「git ブランチ指定」などで検索してください）以下のような出力になることを確認してください。
 ```
@@ -259,8 +259,8 @@ remote:
 To http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git
  * [new branch]      1 -> 1
 ```
-9. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/branches)にアクセスし、先ほど作成したブランチ「1」がリモートリポジトリにプッシュされていることを確認してください。
-10. ブランチ「1」右側の「Merge request」ボタンをクリックし、以下の内容でマージリクエストを作成してください。入力後、「Submit merge request」ボタンをクリックしてください。 
+10. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/branches)にアクセスし、先ほど作成したブランチ「1」がリモートリポジトリにプッシュされていることを確認してください。
+11. ブランチ「1」右側の「Merge request」ボタンをクリックし、以下の内容でマージリクエストを作成してください。入力後、「Submit merge request」ボタンをクリックしてください。 
 ```
 Title: #1 テキストファイル編集
 Description:
@@ -271,8 +271,8 @@ cicd-study-public/git-practice-target#1
 - テキストファイル「<社員番号>.txt」を作成
 
 ```
-11. 「Merge」ボタンをクリックし、ブランチ「1」をmasterブランチにマージしてください。（本当はレビュー担当者またはマージ担当者にマージ作業を分担します）
-12. ブラウザで[masterブランチ](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/blob/master/)の内容を確認し、先ほど編集したファイルがmasterブランチに反映されていることを確認してください。
+12. 「Merge」ボタンをクリックし、ブランチ「1」をmasterブランチにマージしてください。（本当はレビュー担当者またはマージ担当者にマージ作業を分担します）
+13. ブラウザで[masterブランチ](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/blob/master/)の内容を確認し、先ほど編集したファイルがmasterブランチに反映されていることを確認してください。
 
 ここまでの内容で、ブランチとissueについて学ぶことができました。これにより、実際のプロジェクトにおいても複数人と並行して開発作業を行うことができるようになります。  
 

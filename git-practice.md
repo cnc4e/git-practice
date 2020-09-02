@@ -242,15 +242,15 @@ git-practice/git-practice
 * master
 ```
 4. ブラウザで[GitLab git-practice-target issue#1](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/issues/1)にアクセスし、これから対応するissueのページを開きます。
-5. issueに対応するため、新しいブランチ「1」を作成してください。
+5. issueに対応するため、issue番号を先頭に加えた新しいブランチを作成してください。（今回の例では「1-<任意文字列>」というブランチ名にしてください）
 6. ローカルリポジトリのブランチ一覧を確認し、以下のような出力になることを確認してください。
 ```
-* 1
+* 1-<任意文字列>
   master
 ```
 7. 先ほどブラウザで開いたissueの説明に従って、修正を行ってください。
 8. すべてのファイルをステージングし、コメント「add file」をつけてコミットしてください。
-9. リモートリポジトリを更新してください。リポジトリは`origin`、ローカルブランチは`1`、リモートブランチは`1`です。（コマンドの書き方は「git ブランチ指定」などで検索してください）以下のような出力になることを確認してください。
+9. リモートリポジトリを更新してください。リポジトリは`origin`、ローカルブランチは`1-<任意文字列>`、リモートブランチは`1-<任意文字列>`です。（コマンドの書き方は「git ブランチ指定」などで検索してください）以下のような出力になることを確認してください。
 ```
 Enumerating objects: 4, done.
 Counting objects: 100% (4/4), done.
@@ -263,10 +263,10 @@ remote: To create a merge request for issue#1, visit:
 remote:   http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/merge_requests/new?merge_request%5Bsource_branch%5D=1
 remote:
 To http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git
- * [new branch]      1 -> 1
+ * [new branch]      1-<任意文字列> -> 1-<任意文字列>
 ```
-10. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/branches)にアクセスし、先ほど作成したブランチ「1」がリモートリポジトリにプッシュされていることを確認してください。
-11. ブランチ「1」右側の「Merge request」ボタンをクリックし、以下の内容でマージリクエストを作成してください。入力後、「Submit merge request」ボタンをクリックしてください。 
+10. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/branches)にアクセスし、先ほど作成したブランチ「1-<任意文字列>」がリモートリポジトリにプッシュされていることを確認してください。
+11. ブランチ「1-<任意文字列>」右側の「Merge request」ボタンをクリックし、以下の内容でマージリクエストを作成してください。入力後、「Submit merge request」ボタンをクリックしてください。 
 ```
 Title: #1 テキストファイル編集
 Description:
@@ -277,7 +277,7 @@ cicd-study-public/git-practice-target#1
 - テキストファイル「<社員番号>.txt」を作成
 
 ```
-12. 「Merge」ボタンをクリックし、ブランチ「1」をmasterブランチにマージしてください。（本当はレビュー担当者またはマージ担当者にマージ作業を分担します）
+12. 「Merge」ボタンをクリックし、ブランチ「1-<任意文字列>」をmasterブランチにマージしてください。（本当はレビュー担当者またはマージ担当者にマージ作業を分担します）
 13. ブラウザで[masterブランチ](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/blob/master/)の内容を確認し、先ほど編集したファイルがmasterブランチに反映されていることを確認してください。
 
 ここまでの内容で、ブランチとissueについて学ぶことができました。これにより、実際のプロジェクトにおいても複数人と並行して開発作業を行うことができるようになります。  

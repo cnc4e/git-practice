@@ -167,7 +167,7 @@ Note over C: 3.<br>コミットを取込
 GitLabからログインを求められた場合は、以下のユーザ/パスワードを使用してください。  
 git-practice/git-practice  
 
-1. コマンドプロンプトまたはPowerShellを使い、任意のディレクトリで`http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。
+1. コマンドプロンプトまたはPowerShellを使い、任意のディレクトリで`http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git`をクローンしてください。
 2. cdコマンドを実行し、ディレクトリ「git-practice-target」へ移動してください。
 3. ファイル「<社員番号>.txt」を作成してください。（手段は問いません。自身の社員番号をファイル名にしてください）
 4. すべてのファイルをステージングしてください。
@@ -180,11 +180,11 @@ Delta compression using up to 8 threads
 Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 284 bytes | 284.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-To http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git
+To http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git
    30bd289..0dea3af  master -> master
 ```
-7. ブラウザで[GitLab git-practice-target](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target)にアクセスしてください。先ほどプッシュした内容が反映され、手順3で作成したファイルがリモートリポジトリに追加されていることを確認してください。
-8. [GitLab git-practice-target](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target)の「＋マーク > New file」をクリックしてください。ファイル名を「<社員番号>-extra.txt」とし、「Commit changes」をクリックしてください。（内容は適当で構いません）
+7. ブラウザで[GitLab git-practice-target](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target)にアクセスしてください。先ほどプッシュした内容が反映され、手順3で作成したファイルがリモートリポジトリに追加されていることを確認してください。
+8. [GitLab git-practice-target](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target)の「＋マーク > New file」をクリックしてください。ファイル名を「<社員番号>-extra.txt」とし、「Commit changes」をクリックしてください。（内容は適当で構いません）
 9. コマンドプロンプトまたはPowerShellを使い、ローカルリポジトリを更新してください。以下のような出力になることを確認してください。
 ```
 remote: Enumerating objects: 3, done.
@@ -192,7 +192,7 @@ remote: Counting objects: 100% (3/3), done.
 remote: Compressing objects: 100% (2/2), done.
 remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (2/2), 268 bytes | 11.00 KiB/s, done.
-From http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target
+From http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target
    0dea3af..abe1aae  master     -> origin/master
 Updating 0dea3af..abe1aae
 Fast-forward
@@ -203,7 +203,7 @@ Fast-forward
 10.  実際にファイルを開いたり、コミットの履歴を確認したりして、リモートリポジトリに対して行われた変更が手元に反映されていることを確認してください。
 11.  手順3・手順8で作成したファイルを削除してください。（手段は問いません）
 12.  すべてのファイルをステージングし、コメント「delete files」をつけてコミットし、リモートリポジトリを更新してください。リポジトリは`origin`、ブランチは`master`です。
-13.  ブラウザで[GitLab git-practice-target](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target)にアクセスしてください。先ほどプッシュした内容が反映され、手順3・手順8で作成したファイルがリモートリポジトリから削除されていることを確認してください。
+13.  ブラウザで[GitLab git-practice-target](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target)にアクセスしてください。先ほどプッシュした内容が反映され、手順3・手順8で作成したファイルがリモートリポジトリから削除されていることを確認してください。
 
 ここまでの内容で、リモートリポジトリを用いて複数人で開発をすることができるようになりました。手元で変更した内容は適宜コミットし、ある程度コミットが溜まったらリモートリポジトリにプッシュします。コミットやプッシュの粒度はプロジェクトによって決められている場合が多いため、指針がある場合はそれに従ってください。  
 リモートリポジトリを用いた開発を学習しましたが、実際の開発作業では複数の機能追加やリリースバージョンが並行して存在する場合が多々あります。その際、複数の変更履歴が混在してしまうと全容の把握が難しくなります。次項では「ブランチ」という概念を学び、この問題点を解決します。
@@ -235,13 +235,13 @@ GitLabのissueに紐づく新しいブランチを`git checkout -b`で作成し�
 GitLabからログインを求められた場合は、以下のユーザ/パスワードを使用してください。  
 git-practice/git-practice  
 
-1. コマンドプロンプトまたはPowerShellを使い、任意のディレクトリで`http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。（[2-2](#2-2-リモートにプッシュ)で実行している場合は不要です）
+1. コマンドプロンプトまたはPowerShellを使い、任意のディレクトリで`http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git`をクローンしてください。（[2-2](#2-2-リモートにプッシュ)で実行している場合は不要です）
 2. cdコマンドを実行し、ディレクトリ「git-practice-target」へ移動してください。（[2-2](#2-2-リモートにプッシュ)で実行している場合は不要です）
 3. ローカルリポジトリのブランチ一覧を確認し、以下のような出力になることを確認してください。
 ```
 * master
 ```
-4. ブラウザで[GitLab git-practice-target issue#1](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/issues/1)にアクセスし、これから対応するissueのページを開きます。
+4. ブラウザで[GitLab git-practice-target issue#1](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/issues/1)にアクセスし、これから対応するissueのページを開きます。
 5. issueに対応するため、issue番号を先頭に加えた新しいブランチを作成してください。（今回の例では「1-<任意文字列>」というブランチ名にしてください）
 6. ローカルリポジトリのブランチ一覧を確認し、以下のような出力になることを確認してください。
 ```
@@ -260,25 +260,25 @@ Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
 Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
 remote:
 remote: To create a merge request for issue#1, visit:
-remote:   http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/merge_requests/new?merge_request%5Bsource_branch%5D=1
+remote:   http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/merge_requests/new?merge_request%5Bsource_branch%5D=1
 remote:
-To http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git
+To http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git
  * [new branch]      1-<任意文字列> -> 1-<任意文字列>
 ```
-10. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/branches)にアクセスし、先ほど作成したブランチ「1-<任意文字列>」がリモートリポジトリにプッシュされていることを確認してください。
+10. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/branches)にアクセスし、先ほど作成したブランチ「1-<任意文字列>」がリモートリポジトリにプッシュされていることを確認してください。
 11. ブランチ「1-<任意文字列>」右側の「Merge request」ボタンをクリックし、以下の内容でマージリクエストを作成してください。入力後、「Submit merge request」ボタンをクリックしてください。 
 ```
 Title: #1 テキストファイル編集
 Description:
 # 関連するIssue
-cicd-study-public/git-practice-target#1
+container/git-practice-target#1
 
 # MRの内容
 - テキストファイル「<社員番号>.txt」を作成
 
 ```
 12. 「Merge」ボタンをクリックし、ブランチ「1-<任意文字列>」をmasterブランチにマージしてください。（本当はレビュー担当者またはマージ担当者にマージ作業を分担します）
-13. ブラウザで[masterブランチ](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/blob/master/)の内容を確認し、先ほど編集したファイルがmasterブランチに反映されていることを確認してください。
+13. ブラウザで[masterブランチ](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/blob/master/)の内容を確認し、先ほど編集したファイルがmasterブランチに反映されていることを確認してください。
 
 ここまでの内容で、ブランチとissueについて学ぶことができました。これにより、実際のプロジェクトにおいても複数人と並行して開発作業を行うことができるようになります。  
 
@@ -296,8 +296,8 @@ cicd-study-public/git-practice-target#1
 既にチームリーダーが作成したissueがいくつかあり、1つ対応するよう伝えられました。  
 ```
 
-1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。
-2. [GitLab git-practice-target issue#2](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/issues/2)を確認し、新しいブランチを作成してください。ブランチ名は「2-<任意文字列>」とします。
+1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git`をクローンしてください。
+2. [GitLab git-practice-target issue#2](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/issues/2)を確認し、新しいブランチを作成してください。ブランチ名は「2-<任意文字列>」とします。
 3. issueの説明に従って、修正を行ってください。コミットのコメントは「add code」とします。
 4. ブランチをプッシュしてください。リモートのブランチ名はローカルのブランチ名と同じにします。
 5. 先ほどプッシュしたブランチをmasterブランチにマージするマージリクエストを作成してください。（ここではマージリクエスト内に`Close #2`とは書かないでください。マージ後にissueがクローズされます）
@@ -319,20 +319,20 @@ Gitには、2章で行った基本的な操作の他にも特定シチュエー�
 ## 3-1. リモートリポジトリのブランチを取得
 ファイルやコードなどブランチの更新内容を取得するには`git pull`を使っていました。そしてリモートリポジトリのブランチを取得するには`git fetch`を使います。`git fetch`を使うことでローカルリポジトリにリモート追跡ブランチが作成され、チェックアウトできるようになります。
 
-1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。
-2. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/branches)にアクセスし、`New branch`からリモートリポジトリに新しいブランチを作成してください。（ブランチ名は任意で構いません）
+1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git`をクローンしてください。
+2. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/branches)にアクセスし、`New branch`からリモートリポジトリに新しいブランチを作成してください。（ブランチ名は任意で構いません）
 3. コンソールでリモート追跡ブランチを含む全てのブランチを表示し、手順2で作成したブランチがまだ反映されていないことを確認してください。（ヒント：`-a`オプションを使います）
 4. リモートリポジトリのブランチを取得してください。
 5. リモート追跡ブランチを含む全てのブランチを表示し、手順2で作成したブランチが反映されていることを確認してください。（ヒント：`-a`オプションを使います）
 6. チェックアウトし、手順2で作成したブランチに切り替えられることを確認してください。
-7. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/branches)にアクセスし、手順2で作成したリモートのブランチを削除してください。誤って他のブランチを削除しないようにしてください。
+7. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/branches)にアクセスし、手順2で作成したリモートのブランチを削除してください。誤って他のブランチを削除しないようにしてください。
 8. チェックアウトし、masterブランチに切り替えてください。
 9. 手順6で作成したローカルのブランチを削除してください。
 
 ## 3-2. 他のブランチをマージ
 同時並行で開発作業が進んでいる場合、他の人の作業を取り込んで手元でテストや動作確認を行いたいシーンが出てきます。`git merge`を使うことで、他のブランチの内容を自分が作業しているブランチに反映させることができます。  
 
-1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。
+1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git`をクローンしてください。
 2. 新しいブランチ「3-2-local」を作成し、切り替えてください。
 3. ディレクトリ「3-2」を作成し、ファイル「3-2-local.txt」を作成してください。（手段は問いません）
 4. リモートのブランチ「3-2-remote」を現在のブランチ「3-2-local」にマージしてください。
@@ -353,7 +353,7 @@ Gitには、2章で行った基本的な操作の他にも特定シチュエー�
 - ブランチ「3-3-target」はブランチ「3-3-source」から派生させたブランチです。ただし「3-3.txt」を変更する前の状態から派生させていて、ファイルを派生元とは別の内容で変更したコミットが存在します。
 
 
-1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。
+1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git`をクローンしてください。
 2. ブランチ「3-3-source」に切り替えてください。（新しく作る必要はありません）
 3. ファイル「3-3.txt」の内容を確認してください。
 4. ブランチ「3-3-target」に切り替えてください。（新しく作る必要はありません）
@@ -405,7 +405,7 @@ minute: 16
 `git stash`を使うことでコミット前の変更を一時的に退避することができます。退避した内容はどのブランチにいても戻すことが可能です。  
 なおコミット済みの内容やリモートブランチへプッシュ済みの内容には効果がありません。あくまでローカルブランチでコミット前の内容にのみ使えます。  
 
-1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。
+1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git`をクローンしてください。
 2. masterブランチでファイル「3-4.txt」を新しく作成します。
 3. 変更内容をステージングします。
 4. コミット前の変更を一時的に退避します。（ヒント：引数は不要です。）
@@ -420,7 +420,7 @@ minute: 16
 `git reset`を使うことでコミットを取り消すことができます。このコマンドはオプションによって、コミットのみ取消、コミットおよびインデックスの取消、コミット・インデックス・手元ファイルの変更の取消と挙動が変わります。現在の状況に適したオプションを使うようにしましょう。なおリモートブランチにプッシュ済みの内容に対して`git reset`を使っても、プッシュ時にエラーになります。その場合はコミットの取消ではなく打消を行いましょう。  
 `git revert`を使うことでコミットを打ち消すことができます。
 
-1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。
+1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git`をクローンしてください。
 2. ローカルブランチ「3-5」を新しく作成し、切り替えてください。
 3. ファイル「3-5.txt」を新しく作成し、コミットしてください。（コミットのコメントは何でも構いません）
 4. コミットの履歴を確認してください。
@@ -437,20 +437,20 @@ minute: 16
 ## 3-6. コミットへのタグ付け
 `git tag`を使うことでコミットにタグを付けることができます。主にリリースバージョンをタグとして付けることが多いです。コミットにタグが付けられていると、後から特定のコミットを探し出すことが簡単になったり、GitLabの機能でリリースページを作ったりできます。  
 
-1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target.git`をクローンしてください。
+1. `http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git`をクローンしてください。
 2. ローカルブランチ「3-6-<社員番号>」を新しく作成し、切り替えてください。
 3. ファイル「3-6.txt」を新しく作成し、コミットしてください。（コミットのコメントは何でも構いません）
 4. コミットにタグ「v1.0.0-<社員番号>」を付けてください。（ヒント：注釈付きのタグを付けてみましょう。コメントは何でも構いません）
 5. ブランチをプッシュしてください。リモートのブランチ名はローカルのブランチ名と同じにします。
 6. タグをプッシュしてください。
-7. ブラウザで[GitLab git-practice-target Tags](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/tags)にアクセスし、手順4で付けたタグが表示されていることを確認してください。
+7. ブラウザで[GitLab git-practice-target Tags](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/tags)にアクセスし、手順4で付けたタグが表示されていることを確認してください。
 8. 同じページでタグ右横のEditボタン（鉛筆マーク）をクリックし、以下の内容を入力して保存します。
    ```
    # 更新内容
    - ファイル追加
    ```
-9. ブラウザで[GitLab git-practice-target Releases](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/releases)にアクセスし、手順7で入力した内容が表示されることと、下部のコミットIDをクリックし手順3のコミットが表示されることを確認してください。これでリリースしたいコミットをリリースページに載せられるようになりました。
-10. ブラウザで[GitLab git-practice-target Tags](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/tags)にアクセスし、手順4で付けたタグを削除してください。
-11. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/cicd-study-public/git-practice-target/-/branches)にアクセスし、手順5でプッシュしたリモートのブランチを削除してください。誤って他のブランチを削除しないようにしてください。
+9. ブラウザで[GitLab git-practice-target Releases](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/releases)にアクセスし、手順7で入力した内容が表示されることと、下部のコミットIDをクリックし手順3のコミットが表示されることを確認してください。これでリリースしたいコミットをリリースページに載せられるようになりました。
+10. ブラウザで[GitLab git-practice-target Tags](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/tags)にアクセスし、手順4で付けたタグを削除してください。
+11. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/branches)にアクセスし、手順5でプッシュしたリモートのブランチを削除してください。誤って他のブランチを削除しないようにしてください。
 12. ターミナルでタグを削除してください。
 13. masterブランチに切り替え、ローカルブランチ「3-6-<社員番号>」を削除してください。

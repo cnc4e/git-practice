@@ -27,55 +27,45 @@
 
 ### プラクティス
 
-GitLabのissueに紐づく新しいブランチを`git checkout -b`で作成し、issueに従って変更を行います。その後、作成したブランチをリモートリポジトリへプッシュし、マージリクエスト機能を使ってみます。  
+Githubのissueを作成してみます。  
+その後、issueに紐づく新しいブランチを`git checkout -b`で作成し、変更を行います。その後、作成したブランチをリモートリポジトリへプッシュし、プルリクエスト機能を使ってみます。  
 なお、`git branch`を実行するとブランチ一覧と現在のブランチを確認できます。  
-GitLabからログインを求められた場合は、以下のユーザ/パスワードを使用してください。  
-git-practice/git-practice  
 
-1. コマンドプロンプトまたはPowerShellを使い、任意のディレクトリで`http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git`をクローンしてください。（[2-2](#2-2-リモートにプッシュ)で実行している場合は不要です）
+1. コマンドプロンプトまたはPowerShellを使い、任意のディレクトリで`ターゲットリポジトリのクローンURL`を使いクローンしてください。ターゲットリポジトリを作成していない場合は、[GitHubの設定](../preparation/github.md)を行ってください。（[2-2](#2-2-リモートにプッシュ)で実行している場合は不要です）
 2. cdコマンドを実行し、ディレクトリ「git-practice-target」へ移動してください。（[2-2](#2-2-リモートにプッシュ)で実行している場合は不要です）
 3. ローカルリポジトリのブランチ一覧を確認し、以下のような出力になることを確認してください。
 ```
 * master
 ```
-4. ブラウザで[GitLab git-practice-target issue#1](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/issues/1)にアクセスし、これから対応するissueのページを開きます。
-5. issueに対応するため、issue番号を先頭に加えた新しいブランチを作成してください。（今回の例では「1-<任意文字列>」というブランチ名にしてください）
+4. ブラウザで`ターゲットリポジトリのページ`にアクセスし、Issues > `New issue`より、以下の内容でissueを作成します。
+- Title: READMEファイル追加
+5. issueに対応するため、issue番号を先頭に加えた新しいブランチを作成してください。（今回の例では「1-README」というブランチ名にしてください）
 6. ローカルリポジトリのブランチ一覧を確認し、以下のような出力になることを確認してください。
 ```
-* 1-<任意文字列>
+* 1-README
   master
 ```
-7. 先ほどブラウザで開いたissueの説明に従って、修正を行ってください。
+7. ファイル「README.md」を作成してください。
 8. すべてのファイルをステージングし、コメント「add file」をつけてコミットしてください。
-9. リモートリポジトリを更新してください。リポジトリは`origin`、ローカルブランチは`1-<任意文字列>`、リモートブランチは`1-<任意文字列>`です。（コマンドの書き方は「git ブランチ指定」などで検索してください）以下のような出力になることを確認してください。
+9. リモートリポジトリを更新してください。リポジトリは`origin`、ローカルブランチは`1-README`、リモートブランチは`1-README`です。（コマンドの書き方は「git ブランチ指定」などで検索してください）以下のような出力になることを確認してください。
 ```
-Enumerating objects: 4, done.
-Counting objects: 100% (4/4), done.
-Delta compression using up to 8 threads
+Counting objects: 2, done.
 Compressing objects: 100% (2/2), done.
-Writing objects: 100% (3/3), 312 bytes | 312.00 KiB/s, done.
-Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-remote:
-remote: To create a merge request for issue#1, visit:
-remote:   http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/merge_requests/new?merge_request%5Bsource_branch%5D=1
-remote:
-To http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target.git
- * [new branch]      1-<任意文字列> -> 1-<任意文字列>
+Writing objects: 100% (2/2), 240 bytes | 240.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for '1-README' on GitHub by visiting:
+remote:      https://github.com/xxxxx/git-practice-target/pull/new/1-README
+remote: 
+To https://github.com/xxxxx/git-practice-target.git
+ * [new branch]      1-README -> 1-README
 ```
-10. ブラウザで[GitLab git-practice-target branches](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/branches)にアクセスし、先ほど作成したブランチ「1-<任意文字列>」がリモートリポジトリにプッシュされていることを確認してください。
-11. ブランチ「1-<任意文字列>」右側の「Merge request」ボタンをクリックし、以下の内容でマージリクエストを作成してください。入力後、「Submit merge request」ボタンをクリックしてください。 
-```
-Title: #1 テキストファイル編集
-Description:
-# 関連するIssue
-container/git-practice-target#1
-
-# MRの内容
-- テキストファイル「<社員番号>.txt」を作成
-
-```
-12. 「Merge」ボタンをクリックし、ブランチ「1-<任意文字列>」をmasterブランチにマージしてください。（本当はレビュー担当者またはマージ担当者にマージ作業を分担します）
-13. ブラウザで[masterブランチ](http://ec2-54-65-130-40.ap-northeast-1.compute.amazonaws.com/container/git-practice-target/-/blob/master/)の内容を確認し、先ほど編集したファイルがmasterブランチに反映されていることを確認してください。
+10. ブラウザで`ターゲットリポジトリのページ`にアクセスし、`master`と書かれたプルダウンをクリックし、先ほど作成したブランチ「1-README」がリモートリポジトリにプッシュされ、表示されることを確認してください。
+11. 同ページの「Compare& pull request」ボタンより、以下の内容でプルリクエストを作成してください。入力後、「Create pull request」ボタンをクリックしてください。 
+- Title: READMEファイル追加
+- Comment: Close #1
+12. 「Merge pull request」ボタンをクリックし、ブランチ「1-README」をmasterブランチにマージしてください。（本当はレビュー担当者またはマージ担当者にマージ作業を分担し、チェックしてもらいます）
+13. ブラウザで`ターゲットリポジトリのページ`のmasterブランチの内容を確認し、先ほど追加したファイルがmasterブランチに反映されていることを確認してください。
 
 ここまでの内容で、ブランチとissueについて学ぶことができました。これにより、実際のプロジェクトにおいても複数人と並行して開発作業を行うことができるようになります。  
 

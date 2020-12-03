@@ -15,8 +15,8 @@ GitHubにログインします。
 - `Public`にチェック
 - `Create Repository`をクリック
 
-手順実施後に遷移するページのURLを控えておいてください。（例. https://github.com/xxxxx/git-practice-target）  
-以降このページを`ターゲットリポジトリのページ`と呼んで扱っていきます。
+手順実施後に遷移するページのURLを控えておいてください。（例. https://github.com/xxxxx/git-practice-target）以降このページを`ターゲットリポジトリのページ`と呼んで扱っていきます。  
+また、このページに表示されている`https://`から始まるクローン用のリモートURLも控えておいてください。（例. https://github.com/xxxxx/git-practice-target.git）以降このURLを`ターゲットリポジトリのクローンURL`と呼んで扱っていきます。  
 
 これで事前準備は完了です。実際にGitの操作を行っていきましょう。
 

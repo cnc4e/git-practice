@@ -62,7 +62,7 @@ To https://github.com/xxxxx/git-practice-target.git
    30bd289..0dea3af  master -> master
 ```
 7. ブラウザで`ターゲットリポジトリのページ`にアクセスしてください。先ほどプッシュした内容が反映され、手順3で作成したファイルがリモートリポジトリに追加されていることを確認してください。
-8. `ターゲットリポジトリのページ`の「＋マーク > New file」をクリックしてください。ファイル名を「2-2-extra.txt」とし、「Commit changes」をクリックしてください。（内容は適当で構いません）
+8. `ターゲットリポジトリのページ`の「Add file > Create new file」をクリックしてください。「Name your file...」に「2-2-extra.txt」と入力します。画面下部の「Commit new file」をクリックしてください。（内容は適当で構いません）
 9. コマンドプロンプトまたはPowerShellを使い、ローカルリポジトリを更新してください。以下のような出力になることを確認してください。
 ```
 remote: Enumerating objects: 3, done.

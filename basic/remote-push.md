@@ -74,7 +74,7 @@ From https://github.com/xxxxx/git-practice-target.git
    0dea3af..abe1aae  master     -> origin/master
 Updating 0dea3af..abe1aae
 Fast-forward
- <社員番号>-extra.txt | 0
+ 2-2-extra.txt | 0
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 2-2-extra.txt
 ```

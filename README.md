@@ -11,6 +11,7 @@ Gitが採用されたプロジェクトにスムーズに参加できるよう�
 インストールおよびgitの設定を行います。  
 1. [インストール](preparation/install.md)
 2. [Gitの設定](preparation/gitconfig.md)
+3. [GitHubの設定](preparation/github.md)
 
 ### 2. 基礎
 Gitを使うにあたり、ある程度必須と思われる内容をまとめています。  

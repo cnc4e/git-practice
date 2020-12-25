@@ -8,21 +8,7 @@
 ## 2-2. リモートにプッシュ
 ### 今回やることの図
 
-```mermaid
-sequenceDiagram
-participant A as 手元のファイル
-participant B as インデックス
-participant C as ローカルリポジトリ
-participant D as リモートリポジトリ
-D->>C: クローン
-A->>B: ステージング
-B->>C: コミット
-Note over C: 1.<br>コミットを蓄積
-C->>D: プッシュ
-Note over D: 2.<br>複数人のコミットを蓄積<br>コミットを共有
-D->>C: プル
-Note over C: 3.<br>コミットを取込
-```
+![](../assets/remote-push.drawio.png)
 
 ### 用語
 #### リモートリポジトリ

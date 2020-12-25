@@ -17,76 +17,76 @@
 1. 任意のディレクトリで`ターゲットリポジトリのクローンURL`を使いクローンしてください。
 2. コンソールで新しいブランチ「3-3-source」を作成し、切り替えてください。
 3. 現在のブランチを確認します。以下のようにブランチ「3-3-source」が選択されていることを確認してください。（他のブランチがリストされていても構いません）
-   ```
-   * 3-3-source
-   master
-   ```
+```
+* 3-3-source
+master
+```
 4. ファイル「3-3.txt」を以下の内容で作成して、コミットしてください。
-   ```
-   year: 2020
-   month: 09
-   day: 18
+```
+year: 2020
+month: 09
+day: 18
 
-   ---
+---
 
-   minute: 16
-   ```
+minute: 16
+```
 5. ブランチ「master」に切り替えてください。
 6. コンソールで新しいブランチ「3-3-target」を作成し、切り替えてください。
 7. 現在のブランチを確認します。以下のようにブランチ「3-3-target」が選択されていることを確認してください。（他のブランチがリストされていても構いません）
-   ```
-   * 3-3-target
-   3-3-source
-   master
-   ```
+```
+* 3-3-target
+3-3-source
+master
+```
 8. ファイル「3-3.txt」を以下の内容で作成して、コミットしてください。手順4で作成した内容と一部競合する行が存在しています。
-   ```
-   year: 2025
-   month: 12
-   day: 18
+```
+year: 2025
+month: 12
+day: 18
 
-   ---
-   hour: 13
-   minute: 16
-   ```
+---
+hour: 13
+minute: 16
+```
 9. そのままブランチ「3-3-target」で、ブランチ「3-3-source」をマージしてください。以下のような出力になります。
-   ```
-   CONFLICT (add/add): Merge conflict in 3-3/3-3.txt
-   Auto-merging 3-3/3-3.txt
-   Automatic merge failed; fix conflicts and then commit the result.
-   ```
+```
+CONFLICT (add/add): Merge conflict in 3-3/3-3.txt
+Auto-merging 3-3/3-3.txt
+Automatic merge failed; fix conflicts and then commit the result.
+```
 10. ファイル「3-3.txt」を開くと以下のようなコンフリクトが発生しています。
-   ```
-   <<<<<<< HEAD
-   year: 2025
-   month: 12
-   day: 18
+```
+<<<<<<< HEAD
+year: 2025
+month: 12
+day: 18
 
-   ---
-   hour: 13
-   minute: 16
-   =======
-   year: 2020
-   month: 09
-   day: 18
+---
+hour: 13
+minute: 16
+=======
+year: 2020
+month: 09
+day: 18
 
-   ---
+---
 
-   minute: 16
+minute: 16
 
-   >>>>>>> 3-3-source
+>>>>>>> 3-3-source
 
-   ```
+```
 11. `<<<<<<< HEAD`から`>>>>>>> 3-3-source`で囲まれた部分を以下のように編集してください。ここでは両方の変更をうまく残してみます。なお、`<<<<<<< HEAD`から`>>>>>>> 3-3-source`の部分は削除して構いません。
-   ```
-   year: 2020
-   month: 09
-   day: 18
+```
+year: 2020
+month: 09
+day: 18
 
-   ---
-   hour: 13
-   minute: 16
-   ```
+---
+hour: 13
+minute: 16
+```
 12. これで競合は解決され、マージ完了です。ファイル「3-3.txt」をコミットしてください。
 13. ブランチ「3-3-source」、「3-3-target」を削除してください。
 

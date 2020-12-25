@@ -28,42 +28,42 @@
 
 1. カレントディレクトリが「git-practice-local」の場合は、cdコマンドを実行し1つ上のディレクトリへ戻ってください。
 2. コマンドプロンプトまたはPowerShellを使い、任意のディレクトリで`ターゲットリポジトリのクローンURL`を使いクローンしてください。ターゲットリポジトリを作成していない場合は、[GitHubの設定](../preparation/github.md)を行ってください。以下のように表示されます。（空リポジトリで構いません）
-   ```
-   Cloning into 'git-practice-target'...
-   warning: You appear to have cloned an empty repository.
-   ```
+```
+Cloning into 'git-practice-target'...
+warning: You appear to have cloned an empty repository.
+```
 3. cdコマンドを実行し、ディレクトリ「git-practice-target」へ移動してください。
 4. ファイル「2-2.txt」を作成してください。
 5. すべてのファイルをステージングしてください。
 6. コメント「add file」をつけてコミットしてください。
 7. リモートリポジトリを更新してください。リポジトリは`origin`、ブランチは`master`です。以下のような出力になることを確認してください。
-   ```
-   Enumerating objects: 4, done.
-   Counting objects: 100% (4/4), done.
-   Delta compression using up to 8 threads
-   Compressing objects: 100% (2/2), done.
-   Writing objects: 100% (3/3), 284 bytes | 284.00 KiB/s, done.
-   Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
-   To https://github.com/xxxxx/git-practice-target.git
-      30bd289..0dea3af  master -> master
-   ```
+```
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 284 bytes | 284.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/xxxxx/git-practice-target.git
+   30bd289..0dea3af  master -> master
+```
 8. ブラウザで`ターゲットリポジトリのページ`にアクセスしてください。先ほどプッシュした内容が反映され、手順3で作成したファイルがリモートリポジトリに追加されていることを確認してください。
 9. `ターゲットリポジトリのページ`の「Add file > Create new file」をクリックしてください。「Name your file...」に「2-2-extra.txt」と入力します。画面下部の「Commit new file」をクリックしてください。（内容は適当で構いません）
 10. コマンドプロンプトまたはPowerShellを使い、ローカルリポジトリを更新してください。以下のような出力になることを確認してください。
-   ```
-   remote: Enumerating objects: 3, done.
-   remote: Counting objects: 100% (3/3), done.
-   remote: Compressing objects: 100% (2/2), done.
-   remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
-   Unpacking objects: 100% (2/2), 268 bytes | 11.00 KiB/s, done.
-   From https://github.com/xxxxx/git-practice-target.git
-      0dea3af..abe1aae  master     -> origin/master
-   Updating 0dea3af..abe1aae
-   Fast-forward
-    2-2-extra.txt | 0
-    1 file changed, 0 insertions(+), 0 deletions(-)
-    create mode 100644 2-2-extra.txt
-   ```
+```
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (2/2), 268 bytes | 11.00 KiB/s, done.
+From https://github.com/xxxxx/git-practice-target.git
+   0dea3af..abe1aae  master     -> origin/master
+Updating 0dea3af..abe1aae
+Fast-forward
+ 2-2-extra.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2-2-extra.txt
+```
 11.  実際にファイルを開いたり、コミットの履歴を確認したりして、リモートリポジトリに対して行われた変更が手元に反映されていることを確認してください。
 12.  手順4・手順9で作成したファイルを削除してください。（手段は問いません）
 13.  すべてのファイルをステージングし、コメント「delete files」をつけてコミットし、リモートリポジトリを更新してください。リポジトリは`origin`、ブランチは`master`です。

@@ -8,7 +8,7 @@
 ## 2-3. ブランチを分ける
 ### 今回やることの図
 
-![](../assets/2-3-1.drawio.svg)
+![](../assets/branch.drawio.png)
 
 ### 用語
 #### ブランチ

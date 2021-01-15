@@ -12,15 +12,7 @@ Gitの基礎について学びます。
 
 ### 今回やることの図
 
-```mermaid
-sequenceDiagram
-participant A as 手元のファイル
-participant B as インデックス
-participant C as ローカルリポジトリ
-A->>B: ステージング
-B->>C: コミット
-Note over C: コミットを蓄積
-```
+![](../assets/local-commit.drawio.png)
 
 ### 用語
 #### ローカルリポジトリ

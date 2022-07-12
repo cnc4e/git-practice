@@ -29,7 +29,7 @@ master
 13. コミットの履歴を確認し、直前のコミットが残っていることおよび変更を元に戻すコミットが追加されていることを確認してください。以下のようなコミットが追加されています。
 ```
 commit 5a9c719ce7fa20155f30a5a804c334b1a8830902 (HEAD -> 3-4)
-Author: narita <narita.ryo@xxxx.xx.xx>
+Author: xx xx <xxxxx.xxx@xxxx.xx.xx>
 Date:   Wed Dec 9 00:49:35 2020 +0000
 
 Revert "add file"
@@ -37,7 +37,7 @@ Revert "add file"
 This reverts commit 07014855a7559d1959ac2b0f84d03a7ca6c48eae.
 
 commit 07014855a7559d1959ac2b0f84d03a7ca6c48eae
-Author: narita <narita.ryo@xxxx.xx.xx>
+Author: xx xx <xxxxx.xxx@xxxx.xx.xx>
 Date:   Wed Dec 9 00:47:33 2020 +0000
 
 add file

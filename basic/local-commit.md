@@ -37,7 +37,7 @@ Gitの基礎について学びます。
 5. 作成したファイル「2-1.txt」をステージングしてください。
 6. インデックスの状態を確認してください。以下のような出力になり、ファイル「2-1.txt」がインデックスに記録されていることを確認してください。
 ```
-On branch master
+On branch main
 
 No commits yet
 
@@ -48,12 +48,12 @@ Changes to be committed:
 7. コメント「first commit」をつけてコミットしてください。
 8. インデックスの状態を確認してください。以下のような出力になり、ファイル「2-1.txt」がインデックスから消えていることを確認してください。
 ```
-On branch master
+On branch main
 nothing to commit, working tree clean
 ```
 9. コミットの履歴を確認してください。以下のような出力になり、ローカルリポジトリにコミットが記録されていることを確認してください。
 ```
-commit e24bd3e10037e21b1619f596979c450516633313 (HEAD -> master)
+commit e24bd3e10037e21b1619f596979c450516633313 (HEAD -> main)
 Author: xx xx <xxxxx.xxx@tis.co.jp>
 Date:   Tue Jul 28 11:38:51 2020 +0900
 

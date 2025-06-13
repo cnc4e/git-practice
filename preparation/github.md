@@ -7,10 +7,10 @@
 # 1. 事前準備
 ## 1-3. GitHubの設定
 [GitHub](https://github.com/)にログインします。  
-アカウントを作成していない場合は作成してください。
+まだアカウントを持っていない場合は作成してください。
 
-ログイン後、右上アイコン横の「+」マーク > `New Repository`より、以下を作成します。  
-- Owner: 自身
+ログイン後、"右上アイコン横の「+」マーク > `New Repository`"より、以下を作成します。  
+- Owner: 自身のアカウント
 - Repository name：`git-practice-target`
 - `Public`にチェック
 - `Create Repository`をクリック

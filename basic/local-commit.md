@@ -62,6 +62,81 @@ Date:   Tue Jul 28 11:38:51 2020 +0900
 
 ここまでの内容で、ローカルリポジトリにコミットを記録していくことができるようになりました。コミットが記録されていることで、容易に特定時点のファイル内容を復元できます。個人で開発する場合はローカルリポジトリへの記録で構いませんが、多人数で開発する場合はリモートリポジトリへ記録していくことになります。次項ではリモートリポジトリを交えたGitの使い方を学んでいきます。
 
+<details>
+<summary>
+答え(一例です)
+</summary>
+
+1. ディレクトリ作成はGUIでも可能なため省略
+
+2. 
+```
+PS C:\Users\tie308747>cd "C:\Users\tie308747\Documents\git-test\git-practice-local"
+PS C:\Users\tie308747\Documents\git-test\git-practice-local>
+移動したいディレクトリを選択した状態で「Shift + 右クリック」で「パスのコピー」が表示されるため、それを使いコピペすると楽です
+```
+
+3. 
+```
+> ls
+> git init
+Initialized empty Git repository in C:/Users/tie308747/Documents/git-test/git-practice-local/.git/
+> ls -Force
+
+
+    ディレクトリ: C:\Users\tie308747\Documents\git-test\git-practice-local
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+d--h--        2025/06/13     16:33                .git
+```
+
+4. ファイル作成はGUIでも可能なため省略
+
+5. 
+```
+git add .
+```
+
+6. 
+```
+> git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   2-1.txt
+```
+
+7. 
+```
+> git commit -m "first commit"
+[master (root-commit) 7b54505] first commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2-1.txt
+```
+
+8. 
+```
+> git status
+On branch master
+nothing to commit, working tree clean
+```
+
+9. 
+```
+> git log
+commit 7b54505c37b14c21a811e02d647fcd5eb0b3d6ac (HEAD -> master)
+Author: kato-pra <kato.kenta@tis.co.jp>
+Date:   Fri Jun 13 16:40:29 2025 +0900
+
+    first commit
+```
+
+</details>
 --- 
 
 [TOP](../README.md)   

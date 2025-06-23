@@ -37,7 +37,7 @@ GitHubのissueを作成してみます。
 ```
 * main
 ```
-4. ブラウザで`ターゲットリポジトリのページ`にアクセスし、"Issues > New issue"より、以下の内容を入力し`Submit new issue`でissueを作成してください。
+4. ブラウザで`ターゲットリポジトリのページ`にアクセスし、"Issues > New issue"より、以下の内容を入力し`Create`でissueを作成してください。
     - Title: READMEファイル追加
 5. issueに対応するため、issue番号を先頭に加えた新しいブランチを作成してください。（今回の例では`1-README`というブランチ名にしてください）
 6. ローカルリポジトリのブランチ一覧を確認し、以下のような出力になることを確認してください。
@@ -66,12 +66,88 @@ To https://github.com/xxxxx/git-practice-target.git
     - Comment: Close #1
 12. 「Merge pull request」ボタンをクリックし、ブランチ`1-README`をmainブランチにマージしてください。（実際の運用ではレビュー担当者またはマージ担当者にマージ作業を分担し、チェックしてもらいます）
 13. ブラウザで`ターゲットリポジトリのページ`のmainブランチの内容を確認し、先ほど追加したファイルがmainブランチに反映されていることを確認してください。
-14. ブラウザで`ターゲットリポジトリのページ`のissuesタブにアクセスし、手順4で作成したissueがクローズされていることを確認してください。クローズされたissueを開き、`pushed a commit that referenced this issue`という文章と共に手順8で行ったコミットが表示されており、issueとコミットが紐づいていることを確認してください。
+14. ブラウザで`ターゲットリポジトリのページ`のissuesタブにアクセスし、手順4で作成したissueがクローズされていることを確認してください。クローズされたissueを開き、`added a commit that references this issue`という文章と共に手順8で行ったコミットが表示されており、issueとコミットが紐づいていることを確認してください。
 
 ここまでの内容で、ブランチとissueについて学ぶことができました。これにより、実際のプロジェクトにおいても複数人と並行して開発作業を行うことができるようになります。  
 
 ### TIPS
 - mainブランチにマージしたブランチの変更履歴は削除できずに残り続けます。アクセスキーやパスワード、秘密鍵などの漏洩させてはいけない情報は、一時的にでも絶対にプッシュしないように気をつけてください。
+
+<details>
+<summary>
+答え(一例です)
+</summary>
+
+1. 2-2で行っているため省略
+2. 2-2で行っているため省略
+3. 
+```
+> git branch
+* main
+```
+
+4. 
+![](./2_3_image/4_1image.png)
+![](./2_3_image/4_2image.png)
+
+5. 
+```
+> git branch 1-README
+> git switch 1-README
+Switched to branch '1-README'
+```
+
+6. 
+```
+> git branch
+* 1-README
+  main
+```
+
+7. ファイル作成はGUIでも可能なため省略
+8. 
+```
+> git add .
+> git commit -m "#1 add file"
+[1-README f7338db] #1 add file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+```
+
+9. 
+```
+> git push origin 1-README
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Writing objects: 100% (3/3), 241 bytes | 241.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for '1-README' on GitHub by visiting:
+remote:      https://github.com/kato-pra/git-practice-target/pull/new/1-README
+remote:
+To https://github.com/kato-pra/git-practice-target.git
+ * [new branch]      1-README -> 1-README
+```
+
+10. 
+![](./2_3_image/10image.png)
+
+11. 
+![](./2_3_image/11_1image.png)
+![](./2_3_image/11_2image.png)
+
+12. 
+![](./2_3_image/12_1image.png)
+![](./2_3_image/12_2image.png)
+
+13. 
+![](./2_3_image/13image.png)
+
+14. 
+![](./2_3_image/14_1image.png)
+![](./2_3_image/14_2image.png)
+
+</details>
 
 --- 
 

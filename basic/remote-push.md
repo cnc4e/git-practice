@@ -74,6 +74,122 @@ Fast-forward
 ここまでの内容で、リモートリポジトリを用いて複数人で開発をすることができるようになりました。手元で変更した内容は適宜コミットし、ある程度コミットが溜まったらリモートリポジトリにプッシュします。コミットやプッシュの粒度はプロジェクトによって決められている場合が多いため、指針がある場合はそれに従ってください。  
 リモートリポジトリを用いた開発を学習しましたが、実際の開発作業では複数の機能追加やリリースバージョンが並行して存在する場合が多々あります。その際、複数の変更履歴が混在してしまうと全容の把握が難しくなります。次項では「ブランチ」という概念を学び、この問題点を解決します。
 
+<details>
+<summary>
+答え(一例です)
+</summary>
+
+
+1.
+```
+PS C:\Users\tie308747\Documents\git-test\git-practice-local> cd ..
+PS C:\Users\tie308747\Documents\git-test>
+```
+
+2. 
+```
+> git clone https://github.com/kato-pra/git-practice-target.git
+Cloning into 'git-practice-target'...
+warning: You appear to have cloned an empty repository.
+```
+
+3. 
+```
+PS C:\Users\tie308747\Documents\git-test> cd git-practice-target
+PS C:\Users\tie308747\Documents\git-test\git-practice-target>
+```
+
+4. ファイル作成はGUIでも可能なため省略
+
+5. 
+```
+git add .
+```
+
+6. 
+```
+> git commit -m "add file"
+[main (root-commit) dd89787] add file
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 2-2.txt
+```
+
+7. 
+```
+> git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 206 bytes | 206.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/kato-pra/git-practice-target.git
+ * [new branch]      main -> main
+```
+
+8. 
+![](./2_2_image/8image.png)
+
+9. 
+![](./2_2_image/9_1image.png)
+![](./2_2_image/9_2image.png)
+![](./2_2_image/9_3image.png)
+
+10. 
+```
+> git pull
+remote: Enumerating objects: 4, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (3/3), 928 bytes | 48.00 KiB/s, done.
+From https://github.com/kato-pra/git-practice-target
+   dd89787..555d7c5  main       -> origin/main
+Updating dd89787..555d7c5
+Fast-forward
+ 2-2-extra.txt | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 2-2-extra.txt
+```
+
+11. 
+```
+> ls
+
+
+    ディレクトリ: C:\Users\tie308747\Documents\git-test\git-practice-target
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2025/06/13     17:19              6 2-2-extra.txt
+-a----        2025/06/13     17:02              0 2-2.txt
+```
+
+12. ファイルの削除はGUIで可能なため省略
+
+13. 
+```
+> git add .
+> git commit -m "delete files"
+[main 9699168] delete files
+ 2 files changed, 1 deletion(-)
+ delete mode 100644 2-2-extra.txt
+ delete mode 100644 2-2.txt
+> git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (1/1), done.
+Writing objects: 100% (2/2), 193 bytes | 193.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/kato-pra/git-practice-target.git
+   555d7c5..9699168  main -> main
+```
+
+14. 
+![](./2_2_image/14image.png)
+
+</details>
+
 --- 
 
 [TOP](../README.md)   

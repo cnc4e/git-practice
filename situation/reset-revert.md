@@ -44,6 +44,178 @@ add file
 ```
 14.  mainブランチに切り替え、ローカルブランチ`3-4`を削除してください。
 
+<details>
+<summary>
+答え(一例です)
+</summary>
+
+1. 
+ディレクトリにターゲットリポジトリクローンがない場合
+```
+> git clone {ターゲットリポジトリのクローンURL}
+```
+既にディレクトリにターゲットリポジトリクローンがある場合
+```
+> git switch main
+> git pull
+```
+
+2. 
+```
+> git branch 3-4
+> git switch 3-4
+Switched to branch '3-4'
+```
+
+3. 
+```
+> git branch
+  1-README
+* 3-4
+  3-ADDFILE
+  main
+```
+
+4. ファイルの作成はGUIでも可能なため省略
+```
+> git add .
+> git commit -m "sample"
+[3-4 6edf1ed] sample
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3-4.txt
+```
+
+5. 
+```
+> git log
+commit 6edf1ed4fa451ff5625dac6ca3ca0afd0e03d18f (HEAD -> 3-4)
+Author: kato-pra <kato.kenta@tis.co.jp>
+Date:   Wed Jun 25 18:17:17 2025 +0900
+
+    sample
+
+commit 9de2237c3381b2104b7fa99f88ed08a4e5db98d2 (origin/main, origin/3-1, main)
+Merge: ae05a9d c52f40f
+Author: kato-pra <139187218+kato-pra@users.noreply.github.com>
+Date:   Thu Jun 19 19:57:33 2025 +0900
+
+    Merge pull request #3 from kato-pra/3-ADDFILE
+
+    #3 add file
+```
+
+6. 
+```
+> git reset --soft HEAD^
+```
+
+7. 
+```
+> git log
+commit 9de2237c3381b2104b7fa99f88ed08a4e5db98d2 (HEAD -> 3-4, origin/main, origin/3-1, main)
+Merge: ae05a9d c52f40f
+Author: kato-pra <139187218+kato-pra@users.noreply.github.com>
+Date:   Thu Jun 19 19:57:33 2025 +0900
+
+    Merge pull request #3 from kato-pra/3-ADDFILE
+
+    #3 add file
+```
+
+8. 
+```
+> git commit -m "sample"
+[3-4 7ca33ca] sample
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 3-4.txt
+```
+
+9. 
+```
+> git reset --hard HEAD^
+HEAD is now at 9de2237 Merge pull request #3 from kato-pra/3-ADDFILE
+```
+
+10. 
+```
+コミット履歴
+> git log
+commit 9de2237c3381b2104b7fa99f88ed08a4e5db98d2 (HEAD -> 3-4, origin/main, origin/3-1, main)
+Merge: ae05a9d c52f40f
+Author: kato-pra <139187218+kato-pra@users.noreply.github.com>
+Date:   Thu Jun 19 19:57:33 2025 +0900
+
+    Merge pull request #3 from kato-pra/3-ADDFILE
+
+    #3 add file
+
+インデックスの状態
+> git status
+On branch 3-4
+nothing to commit, working tree clean
+
+手元ファイル
+> ls
+
+
+    ディレクトリ: C:\Users\tie308747\Documents\git-test\git-practice-target
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        2025/06/19     19:59              0 Must.txt
+-a----        2025/06/19     19:24              0 README.md
+```
+
+11. プラクティス4と同じ操作のため省略
+12. 
+```
+> git revert HEAD
+[3-4 b85f21c] Revert "sample"
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 3-4.txt
+
+エディタ画面が出てきた場合、:を押下した後にwqと入力してください
+```
+
+13. 
+```
+> git log
+commit b85f21cc776532c38ff3d2f477bec619a84db794 (HEAD -> 3-4)
+Author: kato-pra <kato.kenta@tis.co.jp>
+Date:   Wed Jun 25 18:35:51 2025 +0900
+
+    Revert "sample"
+
+    This reverts commit b4e9d9b8e86b814f1ee57730df79a627324d002f.
+
+commit b4e9d9b8e86b814f1ee57730df79a627324d002f
+Author: kato-pra <kato.kenta@tis.co.jp>
+Date:   Wed Jun 25 18:35:43 2025 +0900
+
+    sample
+
+commit 9de2237c3381b2104b7fa99f88ed08a4e5db98d2 (origin/main, origin/3-1, main)
+Merge: ae05a9d c52f40f
+Author: kato-pra <139187218+kato-pra@users.noreply.github.com>
+Date:   Thu Jun 19 19:57:33 2025 +0900
+
+    Merge pull request #3 from kato-pra/3-ADDFILE
+
+    #3 add file
+```
+
+14. 
+```
+> git switch main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+> git branch -D 3-4
+Deleted branch 3-4 (was b85f21c).
+```
+
+</details>
+
 --- 
 
 [TOP](../README.md)   

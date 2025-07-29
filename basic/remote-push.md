@@ -82,8 +82,7 @@ Fast-forward
 
 1.
 ```
-PS C:\Users\tie308747\Documents\git-test\git-practice-local> cd ..
-PS C:\Users\tie308747\Documents\git-test>
+> cd ..
 ```
 
 2. 
@@ -95,8 +94,7 @@ warning: You appear to have cloned an empty repository.
 
 3. 
 ```
-PS C:\Users\tie308747\Documents\git-test> cd git-practice-target
-PS C:\Users\tie308747\Documents\git-test\git-practice-target>
+> cd git-practice-target
 ```
 
 4. ファイル作成はGUIでも可能なため省略

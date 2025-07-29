@@ -71,8 +71,8 @@ Date:   Tue Jul 28 11:38:51 2020 +0900
 
 2. 
 ```
-PS C:\Users\tie308747>cd "C:\Users\tie308747\Documents\git-test\git-practice-local"
-PS C:\Users\tie308747\Documents\git-test\git-practice-local>
+> cd "C:\Users\tie308747\Documents\git-test\git-practice-local"
+上記のパスは例です
 移動したいディレクトリを選択した状態で「Shift + 右クリック」で「パスのコピー」が表示されるため、それを使いコピペすると楽です
 ```
 
